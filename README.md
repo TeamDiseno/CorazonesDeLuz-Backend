@@ -23,5 +23,3 @@ _Especificar acá todo lo que se necesita para ejecutar el proyecto exitosamente
 - Juárez Carlos
 
 
-Este es un cambio de ejemplo
-Este es otro cambio de ejemplo
