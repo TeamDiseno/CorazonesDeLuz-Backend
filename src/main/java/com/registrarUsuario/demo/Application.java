@@ -1,4 +1,4 @@
-package com.fundacion.demo;
+package com.registrarUsuario.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
