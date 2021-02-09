@@ -1,30 +1,29 @@
-package com.domain.entity;
+package com.database.repository;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-public class Institution {
+import com.domain.entity.User;
+
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@Table(name = "Instituciones")
+public class InstitucionEntity {
 	
-	
-	@GeneratedValue
+	@Id
 	private int id;
-	
 	private String nombre;
 	private String direccion; 
 	private User encargado;
 	
 	
-	
-	public Institution() {
-		
-	}
-	
-	public Institution(String nombre, String direccion, User encargado) {
-		this.nombre=nombre;
-		this.direccion=direccion;
-		this.nombre=nombre; 
-	}
-	
-
 
 	public String getNombre() {
 		return nombre;
@@ -45,7 +44,5 @@ public class Institution {
 		this.encargado = encargado;
 	}
 
-	
-	
 	
 }
