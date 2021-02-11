@@ -29,4 +29,20 @@ public class ServiceUser {
 		repository.deleteById(id);
 	}
 	
+	
+	public User updateUser(User user) {
+		User upUser = repository.findById(user.getDni()).orElse(null);
+		
+		upUser.setApellido(user.getApellido());
+		upUser.setCorreo(user.getCorreo());
+		upUser.setDomicilio(user.getDomicilio());
+		upUser.setNombre(user.getNombre());
+		upUser.setNumTelefono(user.getNumTelefono());
+		upUser.setPassword(user.getPassword());
+		upUser.setUsername(user.getUsername());
+		upUser.setTipoUsuario(user.getTipoUsuario());
+		
+		return repository.save(upUser);
+	}
+	
 }
