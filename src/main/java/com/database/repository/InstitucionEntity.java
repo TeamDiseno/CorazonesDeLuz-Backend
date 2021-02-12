@@ -1,19 +1,20 @@
 package com.database.repository;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 import com.domain.entity.User;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
-@Entity
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 @Table(name = "Instituciones")
 public class InstitucionEntity {
 	
@@ -23,8 +24,6 @@ public class InstitucionEntity {
 	private String direccion; 
 	private User encargado;
 	
-	
-
 	public int getId() {
 		return id;
 	}

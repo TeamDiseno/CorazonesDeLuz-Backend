@@ -17,13 +17,8 @@ public class InstitutionService {
 	@Autowired
 	IInstitutionRepository repository;
 
-	public String saveInstitution(Institution newInstitution) {
-		InstitucionEntity institution = new InstitucionEntity();
-		institution.setId(newInstitution.getId());
-		institution.setDireccion(newInstitution.getDireccion());
-		institution.setEncargado(newInstitution.getEncargado());
-		institution.setNombre(newInstitution.getNombre());
-		repository.save(institution);
+	public String saveInstitution(InstitucionEntity newInstitution) {;
+		repository.save(newInstitution);
 		return ("La nueva institucion fue registrada");
 	}
 	
