@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.fundacionCorazonesDeLuz</groupId>
-	<artifactId>RegistrarUsuario_0.1</artifactId>
+	<artifactId>RegistrarUsuario2</artifactId>
 	<version>0.0.1</version>
-	<name>RegistrarUsuario_0.1</name>
+	<name>RegistrarUsuario2</name>
 	<description>Prototipo de Backend para la Fundacion Corazónes de Luz, funcionalidad registrar usuario</description>
 	<properties>
 		<java.version>15</java.version>
@@ -26,6 +26,12 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>

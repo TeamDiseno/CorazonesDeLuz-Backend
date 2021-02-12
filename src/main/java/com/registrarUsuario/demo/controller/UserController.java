@@ -1,4 +1,4 @@
-package com.controller;
+package com.registrarUsuario.demo.controller;
 
 import java.util.List;
 
@@ -11,16 +11,14 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.application.service.ServiceUser;
-import com.domain.entity.User;
-
+import com.registrarUsuario.demo.entity.User;
+import com.registrarUsuario.demo.service.UserService;
 
 @RestController
-public class ControllerUser {
+public class UserController {
 
-	
 	@Autowired
-	private ServiceUser service;
+	private UserService service;
 	
 	
 	@PostMapping("/api")
@@ -28,17 +26,16 @@ public class ControllerUser {
 		return service.saveUser(user);
 	}
 	
-	
 	@GetMapping("/api")
-	public List<User> getUser(){
-		return service.getAllUser();
+	public List<User> getAll() {
+		return service.getAll();
 	}
 	
 	
 	@DeleteMapping("/api/{id}")
 	public void deleteUser(@PathVariable int id) {
-		//sSystem.out.print("El usuario de "+id+" Fue eliminado");
 		service.deleteUser(id);
+		System.out.print("El usuario " + id + " fue borrado");
 	}
 	
 	
@@ -46,5 +43,7 @@ public class ControllerUser {
 	public User updateUser(@RequestBody User user) {
 		return service.updateUser(user);
 	}
+	
+	
 	
 }
