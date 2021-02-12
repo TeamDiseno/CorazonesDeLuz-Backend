@@ -24,31 +24,26 @@ public class ServiceNiño {
 	}
 	
 		
-	public niño deleteniño(int id) {
-		niño n = repository.findById(id).orElse(null);
-		repository.delete(n);
-		return n;
+	public void deleteNiño(int id) {
+		repository.deleteById(id);
+		
 	}
 	
 	
-	public niño updateniño(niño Niño){
-		//nose que fallo ahi
-		niño upniño = repository.findById(niño.getDni()).orElse(null);
+	 public niño updateNiño(niño Niño){
+	
+	    niño upniño = repository.findById(Niño.getDni()).orElse(null);
 
-		upniño.setApellido(niño.getApellido());
-		upniño.setNombre(niño.getNombre());
-		upniño.setEdad(niño.getEdad());
-		upniño.setCalzado(niño.getCalzado());
-		upniño.setTalle(niño.getTalle());
+		 upniño.setApellido(Niño.getApellido());
+		 upniño.setNombre(Niño.getNombre());
+		 upniño.setEdad(Niño.getEdad());
+		upniño.setCalzado(Niño.getCalzado());
+		 upniño.setTalle(Niño.getTalle());
 		
 
 		return repository.save(upniño);
-	}
+		}
 	
-	
-	public void deletePerson(niño Niño){
-		repository.deleteById(Niño.getId());
-	}
 	
 	
 }

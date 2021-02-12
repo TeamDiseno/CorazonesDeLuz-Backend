@@ -24,7 +24,7 @@ public class ControllerNiño {
 	private ServiceNiño serviceN;
 	
 	@PostMapping("/api")
-    public niño addPersona(@RequestBody niño Niño) {
+    public niño addNiño(@RequestBody niño Niño) {
         return serviceN.saveNiño(Niño);
 	}
 
@@ -35,14 +35,14 @@ public class ControllerNiño {
 	
 	
 	@PutMapping("/api")
-	public niño update(@RequestBody niño Niño) {
-		return serviceN.updateniño(Niño);
+	public niño updateNiño(@RequestBody niño Niño) {
+		return serviceN.updateNiño(Niño);
 	}
 	
-	@DeleteMapping("/api/{id}")
-	public niño delete(@PathVariable int id) {
-		return serviceN.deleteniño(id);
+	@DeleteMapping("/api/ {id}")
+	public void deleteNiño(int id) {
+		System.out.print("El usuario de "+id+" Fue eliminado");
+		serviceN.deleteNiño(id);
 	}
-	
 
 }
