@@ -1,16 +1,31 @@
 package com.domain.entity;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
 @Table(name = "users")
 public class User {
 
-	private String nombre;
-	private String apellido;
 	
 	@Id
+	@GeneratedValue
+	private int id;
+	
+	private String nombre;
+	private String apellido;
+
+	
 	@Column(unique = true)
 	private int dni;
 	
@@ -21,23 +36,6 @@ public class User {
 	private String username;
 	private String password;
 	
-	
-	
-	public User(String nombre, String apellido, int dni, int tipoUsuario, String correo, String domicilio,
-			int numTelefono, String username, String password) {
-		super();
-		this.nombre = nombre;
-		this.apellido = apellido;
-		this.dni = dni;
-		this.tipoUsuario = tipoUsuario;
-		this.correo = correo;
-		this.domicilio = domicilio;
-		this.numTelefono = numTelefono;
-		this.username = username;
-		this.password = password;
-	}
-
-
 
 	public String getNombre() {
 		return nombre;
