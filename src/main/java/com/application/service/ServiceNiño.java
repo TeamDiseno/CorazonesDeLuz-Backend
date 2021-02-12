@@ -38,8 +38,8 @@ public class ServiceNiño {
 		upniño.setApellido(niño.getApellido());
 		upniño.setNombre(niño.getNombre());
 		upniño.setEdad(niño.getEdad());
-		upniño.setCalzado(niño.getNiño());
-		upniño.setTalle(niño.getUsername());
+		upniño.setCalzado(niño.getCalzado());
+		upniño.setTalle(niño.getTalle());
 		
 
 		return repository.save(upniño);
