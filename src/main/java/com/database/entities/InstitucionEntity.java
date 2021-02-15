@@ -1,6 +1,7 @@
-package com.database.repository;
+package com.database.entities;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -19,15 +20,17 @@ import lombok.NoArgsConstructor;
 public class InstitucionEntity {
 	
 	@Id
-	private int id;
+	@GeneratedValue
+	private Integer id;
 	private String nombre;
 	private String direccion; 
-	private User encargado;
 	
-	public int getId() {
+	
+	
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getNombre() {
@@ -42,12 +45,7 @@ public class InstitucionEntity {
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
-	public User getEncargado() {
-		return encargado;
-	}
-	public void setEncargado(User encargado) {
-		this.encargado = encargado;
-	}
+	
 
 	
 }
