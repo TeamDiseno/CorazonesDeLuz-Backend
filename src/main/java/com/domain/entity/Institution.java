@@ -1,11 +1,10 @@
 package com.domain.entity;
 
-import javax.persistence.GeneratedValue;
 
 public class Institution {
 	
 	
-	@GeneratedValue
+	
 	private int id;
 	
 	private String nombre;

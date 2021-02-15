@@ -5,8 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.database.entities.InstitucionEntity;
 import com.database.repository.IInstitutionRepository;
-import com.database.repository.InstitucionEntity;
 import com.domain.entity.Institution;
 
 
@@ -36,7 +36,6 @@ public class InstitutionService {
 	public InstitucionEntity updateInstitution(Institution institution){
 		InstitucionEntity institutionToUpdate = repository.findById(institution.getId()).orElse(null);
 		institutionToUpdate.setDireccion(institution.getDireccion());
-		institutionToUpdate.setEncargado(institution.getEncargado());
 		institutionToUpdate.setNombre(institution.getNombre());
 		repository.save(institutionToUpdate);
 		return institutionToUpdate;
