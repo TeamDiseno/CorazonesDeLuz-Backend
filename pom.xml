@@ -14,7 +14,7 @@
 	<name>RegistrarUsuario_0.1</name>
 	<description>Prototipo de Backend para la Fundacion Corazónes de Luz, funcionalidad registrar usuario</description>
 	<properties>
-		<java.version>15</java.version>
+		<java.version>14</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -57,6 +57,14 @@
 					</excludes>
 				</configuration>
 			</plugin>
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-surefire-plugin</artifactId>
+			    <version>2.19.1</version>
+			    <configuration>
+			        <testFailureIgnore>true</testFailureIgnore>
+			    </configuration>
+		  	</plugin>			
 		</plugins>
 	</build>
 
