@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.fundacionCorazonesDeLuz</groupId>
-	<artifactId>Prototipo_0.1</artifactId>
+	<artifactId>RegistrarUsuario_0.1</artifactId>
 	<version>0.0.1</version>
-	<name>Prototipo_0.1</name>
-	<description>Prototipo de Backend para la Fundacion Corazónes de Luz</description>
+	<name>RegistrarUsuario_0.1</name>
+	<description>Prototipo de Backend para la Fundacion Corazónes de Luz, funcionalidad registrar niño</description>
 	<properties>
 		<java.version>15</java.version>
 	</properties>
