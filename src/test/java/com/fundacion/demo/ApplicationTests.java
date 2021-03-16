@@ -1,4 +1,4 @@
-package com.registrarUsuario.demo;
+package com.fundacion.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
